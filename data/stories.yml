@@ -1,0 +1,60 @@
+version: "3.1"
+stories:
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: affirm user
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: deny user
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: add flower to cart
+  steps:
+  - intent: add_to_cart
+  - action: action_add_to_cart
+  - action: utter_add_to_cart
+
+- story: check flower availability
+  steps:
+  - intent: check_availability
+  - action: action_check_availability
+
+- story: remove flower from cart
+  steps:
+  - intent: remove_from_cart
+  - action: action_remove_from_cart
+  - action: utter_remove_from_cart
+
+- story: show cart
+  steps:
+  - intent: show_cart
+  - action: action_show_cart
+  - action: utter_show_cart
+
+- story: clear cart
+  steps:
+  - intent: clear_cart
+  - action: action_clear_cart
+  - action: utter_clear_cart
+
+- story: thank the user
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: help user
+  steps:
+  - intent: help
+  - action: utter_help

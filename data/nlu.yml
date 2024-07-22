@@ -1,0 +1,124 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - howdy
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+    - talk to you later
+    - see you
+    - catch you later
+    - bye bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+    - absolutely
+    - definitely
+    - indeed
+    - of course
+    - yup
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't think so
+    - no way
+    - nah
+
+- intent: add_to_cart
+  examples: |
+    - I want to add [roses](flower_type) to my cart
+    - Add [tulips](flower_type) to my cart
+    - Can you add [lilies](flower_type) to my cart?
+    - Put [sunflowers](flower_type) in my cart
+    - I need [daisies](flower_type), please add to cart
+    - Add [orchids](flower_type) to my shopping cart
+    - Could you add [poppies](flower_type) to my cart?
+    - Please add [daffodils](flower_type) to the cart
+    - I'd like to buy [marigolds](flower_type), add them to the cart
+
+- intent: check_availability
+  examples: |
+    - Do you have [roses](flower_type)?
+    - Are [tulips](flower_type) available?
+    - Can I buy [lilies](flower_type)?
+    - Do you sell [sunflowers](flower_type)?
+    - Are [daisies](flower_type) in stock?
+    - Can I get [orchids](flower_type)?
+    - Do you have any [poppies](flower_type)?
+    - Are there any [daffodils](flower_type) available?
+    - Can I order [marigolds](flower_type)?
+
+- intent: remove_from_cart
+  examples: |
+    - Remove [roses](flower_type) from my cart
+    - Can you take [tulips](flower_type) out of my cart?
+    - I don't want [lilies](flower_type) anymore, remove them
+    - Take [sunflowers](flower_type) out of my shopping cart
+    - Please remove [daisies](flower_type) from my cart
+    - Delete [orchids](flower_type) from my cart
+    - I changed my mind about [poppies](flower_type), take them out
+    - Remove [daffodils](flower_type) from the cart
+    - Can you remove [marigolds](flower_type) from my cart?
+
+- intent: show_cart
+  examples: |
+    - Show me my cart
+    - What's in my cart?
+    - Can I see my shopping cart?
+    - Show my cart items
+    - What do I have in my cart?
+    - Display my cart
+    - List the items in my cart
+    - What have I added to my cart?
+
+- intent: clear_cart
+  examples: |
+    - Clear my cart
+    - Empty the cart
+    - Remove all items from my cart
+    - Delete everything in my cart
+    - Can you clear my cart?
+    - I want to empty my shopping cart
+    - Remove all flowers from my cart
+    - Clear out my cart
+
+- intent: thank_you
+  examples: |
+    - Thank you
+    - Thanks
+    - Thanks a lot
+    - Thank you very much
+    - Many thanks
+    - Much appreciated
+    - Thanks a ton
+    - Thank you so much
+    - Appreciate it
+
+- intent: help
+  examples: |
+    - I need help
+    - Can you help me?
+    - I need assistance
+    - Can you assist me?
+    - Help me please
+    - I need some help
+    - Could you help me out?
+    - Can you give me a hand?
+
+

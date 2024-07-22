@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - add_to_cart
+  - check_availability
+  - remove_from_cart
+  - show_cart
+  - clear_cart
+  - thank_you
+  - help
+
+entities:
+  - flower_type
+
+slots:
+  flower_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: flower_type
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  
+  utter_affirm:
+    - text: "Great!"
+  
+  utter_deny:
+    - text: "No problem!"
+  
+  utter_flower_not_available:
+    - text: "Sorry, we don't have {flower_type} at the moment."
+  
+  utter_add_to_cart:
+    - text: "{flower_type} has been added to your cart."
+  
+  utter_remove_from_cart:
+    - text: "{flower_type} has been removed from your cart."
+  
+  utter_show_cart:
+    - text: "Here are the items in your cart: {cart_items}"
+  
+  utter_clear_cart:
+    - text: "Your cart has been cleared."
+  
+  utter_thank_you:
+    - text: "You're welcome!"
+  
+  utter_help:
+    - text: "I can help you with managing your cart, checking flower availability, and more. What do you need help with?"
+
+actions:
+  - action_add_to_cart
+  - action_check_availability
+  - action_remove_from_cart
+  - action_show_cart
+  - action_clear_cart
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

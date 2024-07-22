@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Add to cart rule
+    condition:
+      - active_loop: null
+      - slot_was_set:
+          - flower_type: "rose"
+    steps:
+      - action: action_add_to_cart
+      - action: utter_add_to_cart
+
+  - rule: Default fallback rule
+    condition:
+      - active_loop: null
+    steps:
+      - action: action_default_fallback
