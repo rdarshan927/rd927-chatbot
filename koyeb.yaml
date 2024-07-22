@@ -1,0 +1,9 @@
+name: my-rasa-bot
+services:
+  - name: rasa-bot
+    image:
+      name: registry-1.docker.io/rdarshan927/rd927-chatbot:latest
+    port: 5005
+    routing:
+      rules:
+        - condition: $path == "/webhooks/rest/webhook"
